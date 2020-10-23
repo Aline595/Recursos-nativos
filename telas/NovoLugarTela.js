@@ -9,10 +9,9 @@ import {
   Button
 } from 'react-native';
 import { useDispatch } from 'react-redux';
+import CapituraLocalizacao from '../componentes/CapituraLocalizacao';
 import TiraFoto from '../componentes/TiraFoto';
 import * as lugaresActions from '../store/lugares-actions';
-
-
 
 const NovoLugarTela = (props) => {
   const dispatch = useDispatch();
@@ -43,6 +42,7 @@ const NovoLugarTela = (props) => {
             value={novoLugar}
           />
           <TiraFoto onFotoTirada={fotoTirada}/>
+          <CapituraLocalizacao />
           <Button 
             title="Salvar lugar"
             onPress={() => {
